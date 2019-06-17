@@ -40,7 +40,11 @@ before_deploy:
     echo "before deploy"
 
 deploy:
-    echo " deploying"
+  - provider: script
+    script:
+        echo "deploying "
+    on:
+      branch: master
 
 after_deploy:
     echo " after deploy"
