@@ -1,0 +1,49 @@
+language: cpp
+os: linux
+
+bracnhes:
+  only:
+  - master
+        
+
+compiler:
+    - clang++
+    - g++
+
+before_install:
+    echo "Before Install prerequite"
+
+install:
+    echo "Installing prerequite"
+
+before_script:
+    echo "before script"
+
+script:
+    echo "in building"
+    mkdir bulid
+    cd build
+    cmake ..
+    make
+
+
+before_cache:
+    echo "before cache"
+
+after_success:
+    echo "after success"
+
+after_failure:
+    echo "after failure"
+
+before_deploy:
+    echo "before deploy"
+
+deploy:
+    echo " deploying"
+
+after_deploy:
+    echo " after deploy"
+
+after_script:
+    echo " after script"
